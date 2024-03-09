@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+</head>
+<body>
+    <h1>Welcome to the Index Page!</h1>
+    <p id="welcome-message"></p>
+    <script>
+        // Get the name value from local storage
+        var name = localStorage.getItem('name');
+
+        // Display a welcome message with the name value
+        if (name) {
+            var welcomeMessage = document.getElementById('welcome-message');
+            welcomeMessage.innerText = 'Welcome, ' + name + '!';
+        }
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Page</title>
+</head>
+<body>
+    <h1>Example Page</h1>
+    <p id="message"></p>
+    <script>
+        // Get the URL search parameters
+        var urlParams = new URLSearchParams(window.location.search);
+
+        // Get the value of the "message" parameter
+        var message = urlParams.get('message');
+
+        // Display the message on the page
+        if (message) {
+            var messageElement = document.getElementById('message');
+            messageElement.innerText = message;
+        }
+    </script>
+</body>
+</html>
